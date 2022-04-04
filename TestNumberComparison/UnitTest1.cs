@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace TestNumberComparison
@@ -35,6 +36,14 @@ namespace TestNumberComparison
             //try every order of the numbers and run test
             numbers = new int[] { -8, 0, 100, -9, -7 };
             Assert.That(Cmp.Largest(numbers), Is.EqualTo(100));
+        }
+
+        [Test]
+
+        public void Empty()
+        {
+            int[] values = Array.Empty<int>();
+            Assert.Throws<ArgumentException>(() => Cmp.Largest(values));
         }
     }
 }
