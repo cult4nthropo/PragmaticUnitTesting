@@ -4,6 +4,7 @@ using NUnit.Framework;
 namespace TestNumberComparison
 {
     [TestFixture]
+    [Category("NumberComparison")]
     public class Tests
     {
         [SetUp]
